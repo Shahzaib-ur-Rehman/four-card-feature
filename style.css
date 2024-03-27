@@ -125,7 +125,7 @@ h1 > span {
   gap: var(--content-spacing);
 }
 
-@media (min-width:800px){
+@media (min-width:50rem){
   .layout-container{
     flex-direction: row;
   }
