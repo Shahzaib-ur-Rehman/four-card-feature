@@ -1,0 +1,198 @@
+:root {
+  --clr-red-400: hsl(0, 78%, 62%);
+  --clr-cyan-400: hsl(180, 62%, 55%);
+  --clr-orange-400: hsl(34, 97%, 64%);
+  --clr-blue-400: hsl(212, 86%, 64%);
+
+  --clr-neutral-800: hsl(234, 12%, 34%);
+  --clr-neutral-400: hsl(229, 6%, 66%);
+  --clr-neutral-200: hsl(0, 0%, 98%);
+
+  --ff-base: "Poppins", sans-serif;
+
+  --fw-light: 200;
+  --fw-regular: 400;
+  --fw-bold: 600;
+}
+
+/* Reset  */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+h1{
+  font-size: 1.5rem;
+  font-weight: var(--fw-light);
+}
+
+/* general style */
+
+body {
+  background-color: var(--clr-neutral-200);
+  color: var(--clr-neutral-400);
+  font-family: var(--ff-base);
+  font-size: 0.938rem;
+  padding-inline: 2em;
+  padding-block-end: 6em;
+  line-height: 1.7;
+}
+
+
+/* header section */
+
+header {
+  text-align: center;
+  margin-block: 6em;
+}
+
+
+h1 > span {
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-800);
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+.wrapper--narrow {
+  max-width: 500px;
+}
+
+
+
+/* main section */
+
+.layout-container{
+  --content-spacing:2em;
+  display: flex;
+  flex-direction: column;
+  /* display: grid; */
+  gap: var(--content-spacing);
+}
+
+@media (min-width:800px){
+  .layout-container{
+    flex-direction: row;
+  }
+
+  /* .layout-container{
+    grid-template-areas: 
+    '. two .'
+    'one two three'
+    'one four three '
+    '. four .'
+
+  } */
+
+  h1{
+    font-size: 2rem;
+  }
+ 
+}
+
+.layout-container > * {
+  flex: 1;
+}
+
+.col{
+  display: grid;
+  gap: var(--content-spacing);
+  align-self: center;
+}
+
+
+
+/* card style */
+
+.card{
+  padding: 2em;
+  border-top: 0.325rem solid;
+  border-radius: 0.325rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card__title{
+  font-size: 1rem;
+  margin: 0;
+  color: var(--clr-neutral-800);
+}
+
+.card__img{
+  margin-left: auto;
+}
+
+
+
+/* utillities */
+
+.border-red{
+  border-top-color: var(--clr-red-400);
+}
+
+
+.border-orange{
+  border-top-color: var(--clr-orange-400);
+}
+
+.border-blue{
+  border-top-color: var(--clr-blue-400);
+}
+
+.border-cyan{
+  border-top-color: var(--clr-cyan-400);
+}
