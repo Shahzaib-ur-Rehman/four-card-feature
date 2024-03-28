@@ -73,7 +73,7 @@ h3 {
   line-height: 1.1;
 }
 
-h1{
+h1 {
   font-size: 1.5rem;
   font-weight: var(--fw-light);
 }
@@ -90,14 +90,12 @@ body {
   line-height: 1.7;
 }
 
-
 /* header section */
 
-header {
+.header {
   text-align: center;
   margin-block: 6em;
 }
-
 
 h1 > span {
   font-weight: var(--fw-bold);
@@ -113,86 +111,88 @@ h1 > span {
   max-width: 500px;
 }
 
-
-
 /* main section */
 
-.layout-container{
-  --content-spacing:2em;
-  display: flex;
-  flex-direction: column;
-  /* display: grid; */
+.layout-container {
+  --content-spacing: 2em;
+  display: grid;
   gap: var(--content-spacing);
 }
 
-@media (min-width:50rem){
-  .layout-container{
+@media (min-width: 50rem) {
+  .layout-container {
     flex-direction: row;
   }
 
-  /* .layout-container{
-    grid-template-areas: 
-    '. two .'
-    'one two three'
-    'one four three '
-    '. four .'
+  .card:nth-child(1) {
+    grid-area: one;
+  }
+  .card:nth-child(2) {
+    grid-area: two;
+  }
 
-  } */
+  .card:nth-child(3) {
+    grid-area: three;
+  }
 
-  h1{
+  .card:nth-child(4) {
+    grid-area: four;
+  }
+
+  .layout-container {
+    grid-template-areas:
+      ". two ."
+      "one two three"
+      "one four three "
+      ". four .";
+  }
+
+  h1 {
     font-size: 2rem;
   }
- 
 }
 
-.layout-container > * {
-  flex: 1;
-}
 
-.col{
+
+.col {
   display: grid;
   gap: var(--content-spacing);
   align-self: center;
 }
 
-
-
 /* card style */
 
-.card{
+.card {
   padding: 2em;
   border-top: 0.325rem solid;
   border-radius: 0.325rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.card__title{
+.card__title {
   font-size: 1rem;
   margin: 0;
   color: var(--clr-neutral-800);
 }
 
-.card__img{
+.card__img {
   margin-left: auto;
 }
 
-
-
 /* utillities */
 
-.border-red{
+.border-red {
   border-top-color: var(--clr-red-400);
 }
 
-
-.border-orange{
+.border-orange {
   border-top-color: var(--clr-orange-400);
 }
 
-.border-blue{
+.border-blue {
   border-top-color: var(--clr-blue-400);
 }
 
-.border-cyan{
+.border-cyan {
   border-top-color: var(--clr-cyan-400);
 }
